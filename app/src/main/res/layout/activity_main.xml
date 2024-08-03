@@ -13,59 +13,70 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Cod:"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextText"
+        android:text="@string/cod"
+        app:layout_constraintBottom_toBottomOf="@+id/etCod"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/etCod"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="number"
-        app:layout_constraintStart_toStartOf="@+id/tvTelefone"
-        tools:layout_editor_absoluteY="16dp" />
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
+        app:layout_constraintStart_toStartOf="@+id/etTelefone"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Nome:"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextText2"
+        android:text="@string/nome"
+        app:layout_constraintBottom_toBottomOf="@+id/etNome"
         app:layout_constraintStart_toStartOf="@+id/tvCod"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/etCod" />
 
     <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintStart_toStartOf="@+id/tvTelefone"
-        tools:layout_editor_absoluteY="77dp" />
-
-    <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/etNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Telefone"
-        app:layout_constraintBottom_toBottomOf="@+id/tvTelefone"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/etTelefone"
+        app:layout_constraintTop_toBottomOf="@+id/etCod"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvTelefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/telefone"
+        app:layout_constraintBottom_toBottomOf="@+id/etTelefone"
         app:layout_constraintStart_toStartOf="@+id/tvNome"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintTop_toBottomOf="@+id/etNome" />
 
     <EditText
-        android:id="@+id/tvTelefone"
+        android:id="@+id/etTelefone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="phone"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/tvTelefone"
+        app:layout_constraintTop_toBottomOf="@+id/etNome"
+        tools:ignore="LabelFor,SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/btIncluir"
@@ -73,43 +84,34 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:text="Incluir"
+        android:text="@string/incluir"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTelefone" />
+        app:layout_constraintTop_toBottomOf="@+id/etTelefone" />
 
     <Button
         android:id="@+id/btAlterar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Alterar"
+        android:text="@string/alterar"
         app:layout_constraintStart_toStartOf="@+id/btIncluir"
         app:layout_constraintTop_toBottomOf="@+id/btIncluir" />
-
-    <Button
-        android:id="@+id/btEditar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Editar"
-        app:layout_constraintStart_toStartOf="@+id/btAlterar"
-        app:layout_constraintTop_toBottomOf="@+id/btAlterar" />
 
     <Button
         android:id="@+id/btExcluir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Excluir"
-        app:layout_constraintStart_toStartOf="@+id/btEditar"
-        app:layout_constraintTop_toBottomOf="@+id/btEditar" />
+        android:text="@string/excluir"
+        app:layout_constraintStart_toStartOf="@+id/btAlterar"
+        app:layout_constraintTop_toBottomOf="@+id/btAlterar" />
 
     <Button
         android:id="@+id/btPesquisar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Pesquisar"
+        android:text="@string/pesquisar"
         app:layout_constraintStart_toStartOf="@+id/btExcluir"
         app:layout_constraintTop_toBottomOf="@+id/btExcluir" />
 
@@ -118,7 +120,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Listar"
+        android:text="@string/listar"
         app:layout_constraintStart_toStartOf="@+id/btPesquisar"
         app:layout_constraintTop_toBottomOf="@+id/btPesquisar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
